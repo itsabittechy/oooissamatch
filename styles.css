@@ -1,0 +1,153 @@
+@font-face{
+    font-family: 'Codystar', cursive;
+    src: "https://fonts.googleapis.com/css2?family=Codystar&display=swap";
+    }
+    body{
+        font-family: 'Codystar', cursive;
+        padding: 5px;
+        font-size:x-large;
+        background-image: url(pictures/backgroundimage.JPG);
+        background-repeat: no-repeat;
+        background-size: 100vw,2000vh;
+    }
+    .page-title,h1{
+        margin-top: 0px;
+        
+    }
+
+    
+    @keyframes anim{
+        from{right:100px}
+        to{left:455px}
+        /*from{top:460px}
+        to{bottom:0px}*/
+    
+    }
+        
+    .container,.flip-card-back{
+        box-sizing: border-box;
+        display:grid;
+        grid-template-columns: repeat(5, auto);
+        transition: transform 0.8s;
+    
+    }
+    .info-container{
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-between; /*make the time and flips seperate eacher to opposite sides of screen*/
+    }
+    
+    #table{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 105px;
+        background-image:("pictures/cardback.JPG");
+        
+        
+    }
+    .cursor,.table,.card,.overlay-text.visible{
+        cursor: url(hand.cur), pointer;
+    }
+    @keyframes flip{
+        from{transform:rotateY(0deg)}
+        to{transform:rotateY(180deg)}
+    
+    }
+    @keyframes flip-card-back{
+        from{transform:rotateY(0deg)}
+        to{transform:rotateY(180deg)}
+    
+    }
+
+    @keyframes spinout{
+      from{transform:rotate(0deg)}
+      to{transform:translate(3000px, 100px) rotate(540deg)}
+    }
+  
+    .spinout{
+      animation-name:spinout;
+      animation-duration:1.5s;
+      animation-fill-mode: forwards;
+      animation-iteration-count:1;
+      transform-origin: center;
+      z-index:10
+    }
+
+    .card{
+        position: relative;
+        width:160px;
+        height:225px;
+        border-radius: 15px;
+        row-gap: 5px;
+        column-gap: 5px;
+        margin:10px;
+        margin-right: 40px;
+        box-shadow: 5px 5px 5px #07070763;
+        background-repeat: no-repeat;
+        animation-fill-mode: forwards;
+    
+    }
+    .overlay-text {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        display: none;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #7016b9;
+        font-family:Mochiy Pop P One;
+        transition: background-color 500ms, font-size 500ms;
+      }
+      
+      .game-over-text{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        display: none;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(pictures/gameover\ crying.gif);
+        color: #7016b9;
+        font-family:Mochiy Pop P One;
+        transition: background-color 500ms, font-size 500ms;
+      }
+      .overlay-text-small {
+        font-size: 100px;
+      }
+      
+      .overlay-text.visible {
+        display: flex;
+        animation: overlay-grow 500ms forwards;
+      }
+      
+      
+      @keyframes dance {
+        0%, 100% {
+          transform: rotate(0)
+        }
+        25% {
+          transform: rotate(-30deg)
+        }
+        75% {
+          transform: rotate(60deg)
+        }
+      }
+      
+      @keyframes overlay-grow {
+        from {
+          background-color: rgba(0, 0, 0, 0);
+          font-size: 0;
+        }
+        to {
+          background-color: rgba(0, 0, 0, .8);
+          font-size: 100px;
+          animation-duration: 5s;
+        }}
