@@ -6,7 +6,7 @@
         font-family: 'Codystar', cursive;
         padding: 5px;
         font-size:x-large;
-        background-image: url(~Downloads/pictures/backgroundimage.JPG);
+        background-image: url(pictures/backgroundimage.JPG);
         background-repeat: no-repeat;
         background-size: 100vw,2000vh;
     }
@@ -41,7 +41,7 @@
         display: flex;
         flex-wrap: wrap;
         padding-left: 105px;
-        background-image:("~/Downloads/pictures/cardback.JPG");
+        background-image:("pictures/cardback.JPG");
         
         
     }
